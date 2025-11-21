@@ -1,0 +1,142 @@
+/*Importamos las fuentes de google fonts necesarias*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap');
+
+body {
+    font-family: 'Cormorant Garamond', serif; /*Definimos la fuente principal que ya hemos importado*/
+    background: #fffaf0;
+    color: #2c1a0a;
+}
+
+/* Declaración de colores como variables CSS */
+:root {
+    --rojo-romano: #8B1A1A;
+    --rojo-oscuro: #611313;
+    --crema: #fffaf0;
+    --oro-suave: #dda742;
+}
+
+/* Tipografía àra los textos y párrafos. Previamente importada también */
+h1,h2,h3,h4,h5,.navbar-brand,.btn { 
+    font-family: 'Cinzel', serif; 
+    letter-spacing: 2px; 
+}
+
+/* Navbar*/
+.navbar {
+    background: linear-gradient(to bottom, var(--rojo-romano), var(--rojo-oscuro)) !important;
+    box-shadow: 0 4px 20px rgba(139,26,26,0.6);
+    
+}
+
+.nav-link { 
+    color: white !important; /*Al añadir important, hacemos que tenga prioridad sobre otros estilos llegado el caso*/
+    font-weight: 600; 
+}
+
+.nav-link:hover { 
+    color: var(--oro-suave) !important; 
+}
+
+/* Carrusel */
+.carousel-caption {
+    background: rgba(139,26,26,0.85);
+    border: 6px double var(--oro-suave);
+    border-radius: 15px;
+    padding: 2rem !important;
+}
+.carousel-caption h1 {
+    color: white;
+    font-size: 4.5rem;
+    text-shadow: 3px 3px 8px #000;
+}
+
+/*Ajustamos el carrusel a pantallas de móviles*/
+@media (max-width:768px) { 
+    .carousel-caption h1 {
+        font-size:2.3rem;
+    } 
+    .carousel-item img{
+        height:70vh;object-fit:cover;
+    } 
+}
+
+/* Tarjetas */
+
+.card {
+    background: white;
+    border: 5px solid var(--rojo-romano);
+    box-shadow: 0 10px 30px rgba(139,26,26,0.25);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(139,26,26,0.4);
+    border-color: var(--rojo-oscuro);
+}
+
+.card-img-top { 
+    border-bottom: 6px solid var(--rojo-romano); 
+    height:200px; 
+    object-fit:cover; 
+}
+
+.card-title { 
+    color: var(--rojo-romano); 
+}
+
+/* Botones */
+.btn-primary {
+    background: var(--rojo-romano);
+    border: 3px solid var(--oro-suave);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+}
+.btn-primary:hover {
+    background: var(--oro-suave);
+    color: var(--rojo-romano);
+    border-color: var(--rojo-romano);
+}
+
+/* Tabla */
+.table { 
+    border: 5px double var(--rojo-romano);
+     background: white; 
+}
+
+.table th { 
+    background: var(--rojo-romano); 
+    color: white; 
+}
+
+/* Títulos con línea roja */
+h2 {
+    color: var(--rojo-romano);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: ''; /* El pseudo-elemento necesita contenido para mostrarse */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 6px;
+    background: var(--rojo-romano);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to top, var(--rojo-oscuro), var(--rojo-romano));
+    border-top: 12px solid var(--oro-suave);
+}
+
+/* Fondo secciones alternas. Sobrescribimos el color bg-light de Bootstrap por defecto por un tono rojo/crema muy claro para mantener la paleta de colores. */
+
+.bg-light { 
+    background: #fdf2f2 !important; 
+}
