@@ -15,7 +15,7 @@ body {
     --oro-suave: #dda742;
 }
 
-/* Tipografía àra los textos y párrafos. Previamente importada también */
+/* Tipografía para títulos. Previamente importada también */
 h1,h2,h3,h4,h5,.navbar-brand,.btn { 
     font-family: 'Cinzel', serif; 
     letter-spacing: 2px; 
